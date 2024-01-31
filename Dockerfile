@@ -4,8 +4,8 @@ EXPOSE 8070
 
 ENV APP_HOME /usr/src/app
 
-COPY ${artifact} app.jar
-
 WORKDIR $APP_HOME
+
+COPY ${artifact} app.jar
 
 ENTRYPOINT exec java -jar app.jar
